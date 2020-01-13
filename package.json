@@ -1,8 +1,25 @@
 {
-  "name": "react-workspace",
-  "version": "1.0.0",
+  "name": "react-monorepo",
+  "version": "0.0.1",
   "license": "MIT",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gorhom/react-monorepo.git"
+  },
+  "keywords": [
+    "react",
+    "react-native",
+    "monorepo",
+    "shared",
+    "yarn",
+    "workspaces"
+  ],
+  "author": "Mo Gorhom",
+  "bugs": {
+    "url": "https://github.com/gorhom/react-monorepo/issues"
+  },
+  "homepage": "https://github.com/gorhom/react-monorepo",
   "workspaces": {
     "packages": [
       "packages/*"

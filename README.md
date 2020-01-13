@@ -1,29 +1,35 @@
-# React / React Native Monorepo
+# React Monorepo
 
-Foobar is a Python library for dealing with word pluralization.
+a simple monorepo setup for `react` & `react-native` using `yarn workspaces`.
 
-## Installation
+![](./docs/demo.gif)
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+## Getting Started
 
-```bash
-pip install foobar
+```sh
+# root folder
+yarn
+
+# to run native
+cd packages/native
+yarn ios
+yarn android
+
+# to run web
+cd packages/web
+yarn start
 ```
 
-## Usage
+## Acknowledgement
 
-```python
-import foobar
-
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
-```
+This repository made possible by the efforts of the amazing community ❤️ [Follow symlinks? #1](https://github.com/facebook/metro/issues/1)
 
 ## Contributing
+
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
 
 ## License
+
 [MIT](https://choosealicense.com/licenses/mit/)
