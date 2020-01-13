@@ -9,7 +9,6 @@ const extraNodeModules = new Proxy(
       if (target.hasOwnProperty(name)) {
         return target[name];
       }
-      // Redirect dependencies referenced from shared folders to mobile package node_modules
       return path.join(process.cwd(), `node_modules/${name}`);
     },
   },

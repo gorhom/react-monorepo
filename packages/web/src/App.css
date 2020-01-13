@@ -1,0 +1,57 @@
+.App {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.App .Title {
+  color: #fff;
+  font-size: 64px;
+  font-weight: 400;
+}
+
+.App .Subtitle {
+  color: #61dafb;
+  font-weight: 600;
+}
+
+.App .Content {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.App .Content .Counter {
+  color: #fff;
+  font-size: 64px;
+  flex-grow: 1;
+  vertical-align: middle;
+}
+
+.App .Footer {
+  padding-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.App .Footer .Button {
+  background-color: #444;
+  margin: 6px;
+  min-width: 200px;
+  padding: 12px;
+  border: 0;
+  border-radius: 23px;
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+}
+
+.App .Footer .Button:hover {
+  background-color: #555;
+}
