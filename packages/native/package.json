@@ -1,0 +1,42 @@
+{
+  "name": "@demo/native",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint .",
+    "clean": "npm-run-all clean:*",
+    "clean:watchman": "watchman watch-del-all",
+    "clean:react-cache": "rm -rf $TMPDIR/react-*",
+    "clean:metro-bundler": "rm -rf $TMPDIR/metro-bundler-cache-*",
+    "clean:react-native-packager": "rm -rf /tmp/haste-map-react-native-packager-*",
+    "nuke": "npm-run-all clean:* nuke:*",
+    "nuke:android": "rm -rf android/app/build && rm -rf android/.idea && rm -rf android/.gradle",
+    "nuke:ios": "rm -rf ios/build && rm -rf ios/Pods && rm -f ios/Podfile.lock && rm -rf ios/App.xcworkspace",
+    "nuke:node": "rm -rf node_modules && rm -f yarn.lock"
+  },
+  "dependencies": {
+    "@demo/shared": "0.0.1",
+    "react": "16.9.0",
+    "react-native": "0.61.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.0",
+    "@babel/runtime": "^7.8.0",
+    "@carimus/metro-symlinked-deps": "^1.1.0",
+    "@react-native-community/eslint-config": "^0.0.6",
+    "babel-jest": "^24.9.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "eslint": "^6.8.0",
+    "jest": "^24.9.0",
+    "metro-react-native-babel-preset": "^0.56.4",
+    "npm-run-all": "^4.1.5",
+    "react-test-renderer": "16.9.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}

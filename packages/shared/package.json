@@ -1,0 +1,15 @@
+{
+  "name": "@demo/shared",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "nuke": "rm -rf node_modules && rm -f yarn.lock"
+  },
+  "dependencies": {
+    "react": "^16.9.0"
+  },
+  "peerDependencies": {
+    "react": "^16.9.0"
+  }
+}
