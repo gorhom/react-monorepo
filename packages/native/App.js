@@ -6,7 +6,7 @@
  * @flow
  */
 
-import React, { useEffect } from 'react';
+import React, {useEffect} from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -14,24 +14,43 @@ import {
   View,
   Text,
   StatusBar,
+  Button,
 } from 'react-native';
-import {useTest} from '@demo/shared';
+import {useCounter} from '@demo/shared';
 
 const App = () => {
-  const {value, setValue} = useTest();
-
-  useEffect(() => {
-    setValue('Test')
-  }, [])
+  const {counter, increment, decrement} = useCounter();
 
   return (
     <>
       <StatusBar barStyle="light-content" />
-      <SafeAreaView style={{backgroundColor: 'red', flex: 1}}>
-        <Text>{value}</Text>
+      <SafeAreaView style={styles.container}>
+        <View style={styles.center}>
+          <Text style={styles.text}>{counter}</Text>
+          <Button onPress={increment} title={'increment'} />
+          <Button onPress={decrement} title={'decrement'} />
+        </View>
       </SafeAreaView>
     </>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: 'black',
+  },
+  center: {
+    flex: 1,
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  text: {
+    fontSize: 24,
+    color: '#fff',
+  },
+});
 
 export default App;

@@ -1,9 +1,19 @@
-import { useState } from 'react'
+import { useState, useCallback } from 'react'
 
-export const useTest = () => {
-  const [value, setValue] = useState()
+export const useCounter = () => {
+  const [counter, setCounter] = useState(0)
+
+  const increment = useCallback(() => {
+    setCounter(counter + 1)
+  }, [counter])
+
+  const decrement = useCallback(() => {
+    setCounter(counter - 1)
+  }, [counter])
+
   return {
-    value, 
-    setValue
+    counter, 
+    increment,
+    decrement
   }
 }
