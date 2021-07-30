@@ -9,7 +9,6 @@
   },
   "keywords": [
     "react",
-    "react-native",
     "monorepo",
     "shared",
     "yarn",
@@ -23,11 +22,6 @@
   "workspaces": {
     "packages": [
       "packages/*"
-    ],
-    "nohoist": [
-      "**/react-native",
-      "**/react-native/**",
-      "**/react-native-*"
     ]
   },
   "scripts": {
